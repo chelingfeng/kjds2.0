@@ -323,6 +323,8 @@
                 <span class="shopify-product-reviews-badge" data-id="{{ product.id }}" {{ block.shopify_attributes }}></span>
 
               {%- when 'description' -%}
+              <!-- 支付图标 -->
+                <img src="{{ 'pay.png' | asset_url }}" width="100%">
                 <div class="product-detail__form__description product-detail__gap-lg rte align-left" {{ block.shopify_attributes }}>
                   {{ product.description }}
                 </div>
@@ -801,7 +803,7 @@
                   <span class="was-price">{{ 2999 | money }}</span>
                   <div class="price">{{ 1999 | money }}</div>
                 </div>
-
+                
               {%- when 'description' -%}
                 <div class="product-detail__form__description product-detail__gap-lg rte align-left" {{ block.shopify_attributes }}>
                   {{ 'homepage.onboarding.body' | t }}

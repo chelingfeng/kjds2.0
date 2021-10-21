@@ -201,6 +201,13 @@
         <span class="vendor">{{ product.vendor }}</span>
       {% endif %}
 
+        
+  <!-- 调整评价位置 -->
+  <div class="ryviu-collection">
+  <ryviu-widget-total collection="1" reviews_data="{{product.metafields.ryviu.product_reviews_info  | escape  }}" product_id="{{product.id}}" handle="{{product.handle}}"></ryviu-widget-total>
+  </div>
+  <!-- RYVIU APP -->
+  
       <div class="price">
         {% if product.price_varies %}{{ 'products.listing.from' | t }}{% endif %}
          <span class="theme-money" style="font-size: 20px;font-weight: 400;">{{ product.price | money }}</span>
@@ -208,11 +215,11 @@
 
         {% render 'unit-price', variant: product %}
       </div>
-            </div>
       <div style="display: block;padding: 14px 0 0 0;">
         <button type="button" class="shopify-payment-button__button">Buy Now</button>
       </div>
     </a>
+
 
     {% if settings.show_product_block_reviews %}
     <a data-cc-animate-click href="{{ product_url }}" class="themed-product-reviews" tabindex="-1">

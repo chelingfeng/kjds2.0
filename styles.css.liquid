@@ -2999,8 +2999,9 @@ ul.nav {
 
 @media (min-width: 768px) {
   .section-spacing {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    /* section间距 */
+    padding-top: 50px;
+    padding-bottom: 0px;
   }
 }
 
@@ -9658,6 +9659,13 @@ html.touch .product-block.product-block--quickbuy .cc-quick-buy-btn, html.touch 
   display: block;
   margin: 0;
   padding: 12px 0 0;
+  /*产品列表最多显示3行*/
+  margin-bottom: 10px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .product-block .vendor, .collection-block .vendor {
@@ -10776,7 +10784,8 @@ html.touch .product-block.product-block--quickbuy .cc-quick-buy-btn, html.touch 
     display: block;
   }
   .product-area .product-area__media .swiper-container:not(.swiper-container-horizontal) .swiper-wrapper img {
-    width: 100% !important;
+    /*产品页图片大小*/
+    width: 85% !important;
     height: auto !important;
   }
 }
@@ -15498,7 +15507,11 @@ shopify-payment-terms {
     padding-bottom: 15px;
   }
 }
-
+/*产品页字体颜色以及大小*/
+.current-price.theme-money {
+    color: red;
+    font-size: 1.8rem !important;
+}
 /*************    ---                   ---                   ---   *************/
 /*************    |     ENTER YOUR CUSTOM CODE BELOW HERE       |   *************/
 /*************    ---                   ---                   ---   *************/
